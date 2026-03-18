@@ -1,0 +1,17 @@
+@function rem($value) {
+  $px-value: 0;
+
+  @if unit($value)=='px' {
+    $px-value: $value;
+  }
+
+  @else if unitless($value) {
+    $px-value: $value * 1px;
+  }
+
+  @else {
+    @error "rem() функция ожидает значение в пикселях или число, получено: #{unit($value)}";
+  }
+
+  @return ($px-value / 22px) * 1rem;
+}
