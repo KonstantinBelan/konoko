@@ -119,6 +119,8 @@ em {
 .section {}
 
 .category {
+  position: relative;
+  z-index: 2;
 
   &__wrapper {}
 
@@ -543,6 +545,62 @@ em {
     &::after {
       right: rem(-10);
       background: url('../img/market-img2.jpg') center no-repeat;
+    }
+  }
+}
+
+.page-category {
+  .titles {
+    position: relative;
+    z-index: 1;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(-50);
+      width: rem(500);
+      height: rem(500);
+      border-radius: 100%;
+      filter: blur(rem(200));
+      z-index: -1;
+    }
+
+    &::before {
+      background: rgba(228, 57, 163, 0.65);
+      left: rem(-50);
+    }
+
+    &::after {
+      background: rgba(241, 229, 25, 0.9);
+      right: rem(-120);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: rem(-50);
+        width: rem(360);
+        height: rem(395);
+        z-index: -1;
+      }
+
+      &::before {
+        left: rem(20);
+        background: url('../img/category-img-1.png') center no-repeat;
+        background-size: cover;
+      }
+
+      &::after {
+        right: rem(20);
+        background: url('../img/category-img-2.png') center no-repeat;
+        background-size: cover;
+      }
     }
   }
 }
