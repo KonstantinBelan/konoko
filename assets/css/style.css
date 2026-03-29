@@ -450,6 +450,8 @@ form button {
 .header {
   width: 100%;
   font-size: 0.7rem;
+  position: relative;
+  z-index: 155;
 }
 .header:not(.footer) {
   position: absolute;

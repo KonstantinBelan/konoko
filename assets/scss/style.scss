@@ -10,6 +10,8 @@
 .header {
   width: 100%;
   font-size: 0.7rem;
+  position: relative;
+  z-index: 155;
 
   &:not(.footer) {
     position: absolute;
