@@ -23,3 +23,11 @@ const reviews = new Swiper('.reviews__wrapper', {
     prevEl: '.reviews__arrow--prev',
   },
 })
+const infoImg = new Swiper('.information__slider', {
+  loop: true,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.information__arrow--next',
+    prevEl: '.information__arrow--prev',
+  },
+})
