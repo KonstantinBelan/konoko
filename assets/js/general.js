@@ -34,3 +34,47 @@ window.addEventListener('resize', () => {
     track.style.animation = 'scroll 30s linear infinite'
   }
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.querySelector('#mobile-menu')
+  const mobileMenu = document.querySelector('.mobile__menu')
+  const menuCloseButton = document.querySelector('.mobile__menu-close')
+  const menuLinks = document.querySelectorAll('.mobile__menu-nav a')
+  const body = document.body
+  const html = document.documentElement
+
+  if (menuButton && mobileMenu && menuCloseButton) {
+    menuButton.addEventListener('click', () => {
+      menuOpen()
+    })
+
+    menuCloseButton.addEventListener('click', () => {
+      menuClose()
+    })
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuClose()
+      })
+    })
+
+    // Закрытие меню при клике вне его области
+    mobileMenu.addEventListener('click', event => {
+      if (event.target === mobileMenu) {
+        menuClose()
+      }
+    })
+
+    function menuOpen() {
+      mobileMenu.classList.add('visible')
+      body.style.overflow = 'hidden' // Блокируем прокрутку страницы
+      html.style.overflow = 'hidden' // Блокируем прокрутку страницы
+    }
+
+    function menuClose() {
+      mobileMenu.classList.remove('visible')
+      body.style.overflow = '' // Разблокируем прокрутку страницы
+      html.style.overflow = '' // Разблокируем прокрутку страницы
+    }
+  }
+})
