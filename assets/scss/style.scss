@@ -18,7 +18,16 @@
     top: rem(40);
   }
 
+  &__logo {
+    width: rem(131);
+    height: auto;
 
+    img {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
 
   &.fixed {
     position: fixed;
@@ -41,6 +50,10 @@
     padding: rem(5);
     padding-right: rem(20);
     border-radius: rem(90);
+  }
+
+  &__burger {
+    display: none;
   }
 
   &__links {
@@ -113,7 +126,12 @@
     padding-top: rem(40);
   }
 
-  &__logo {}
+  &__logo {
+    img {
+      width: rem(500);
+      height: auto;
+    }
+  }
 
   &__title {
     width: 100%;
@@ -201,6 +219,10 @@
       z-index: -1;
       width: 100%;
       height: 100%;
+
+      &--mobile {
+        display: none;
+      }
 
       img {
         width: 100%;
@@ -457,6 +479,11 @@
     }
   }
 
+  .section__wrapper {
+    position: relative;
+    z-index: 4;
+  }
+
   &__bg {
     position: absolute;
     z-index: -1;
@@ -479,8 +506,6 @@
       height: rem(1007);
       top: rem(-120);
       left: -35vw;
-
-
     }
 
     .what__star2 {
@@ -778,3 +803,7 @@
 }
 
 @import 'pages';
+
+@media screen and (max-width:640px) {
+  @import 'mobile';
+}

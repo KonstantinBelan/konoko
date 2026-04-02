@@ -22,6 +22,14 @@ const reviews = new Swiper('.reviews__wrapper', {
     nextEl: '.reviews__arrow--next',
     prevEl: '.reviews__arrow--prev',
   },
+  breakpoints: {
+    240: {
+      spaceBetween: 10,
+    },
+    640: {
+      spaceBetween: 20,
+    },
+  },
 })
 const infoImg = new Swiper('.information__slider', {
   loop: true,

@@ -10,6 +10,31 @@ html {
   @media screen and (max-width:1680px) {
     font-size: 25px;
   }
+
+  @media screen and (max-width:1480px) {
+    font-size: 21px;
+  }
+
+  @media screen and (max-width:1260px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width:1070px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width:920px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width:720px) {
+    font-size: 11px;
+  }
+
+  @media screen and (max-width:640px) {
+    // font-size: 14px;
+    font-size: 4vw;
+  }
 }
 
 body {
@@ -122,6 +147,12 @@ em {
 
         &::after {
           background: var(--yellow);
+        }
+      }
+
+      @media screen and (min-width:640px) {
+        &.mark-mobile::after {
+          display: none;
         }
       }
 
