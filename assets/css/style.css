@@ -1879,6 +1879,10 @@ em.yellow {
 }
 
 @media screen and (max-width: 640px) {
+  body,
+  main {
+    overflow-x: hidden;
+  }
   .header__nav {
     display: none;
   }
